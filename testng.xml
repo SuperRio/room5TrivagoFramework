@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Trivago room5 Suite" >
+	<parameter name="browser" value="chrome" />
+
+  <test name="pages">
+    <classes>
+     
+      <class name="pages.HomePage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

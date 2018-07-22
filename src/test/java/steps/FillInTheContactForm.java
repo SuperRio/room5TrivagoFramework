@@ -42,6 +42,7 @@ public class FillInTheContactForm extends TestBase {
 		int number_of_tabs = tab_handles.size();
 		int new_tab_index = number_of_tabs - 1;
 		driver.switchTo().window(tab_handles.toArray()[new_tab_index].toString());
+		Thread.sleep(2000);
 		cPage.ContactMsg();
 		cPage.WriteName();
 		cPage.WriteEmail();

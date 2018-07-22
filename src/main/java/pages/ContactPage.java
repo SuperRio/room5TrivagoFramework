@@ -17,7 +17,7 @@ public class ContactPage extends PageBase {
 		cookieClose.click();
 	}
 
-	@FindBy (css = "textarea.contact-msg")
+	@FindBy (xpath = "//textarea[@class='contact-msg']")
 	public WebElement contactMsg;
 	public void ContactMsg()
 	{

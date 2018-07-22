@@ -19,8 +19,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import utilities.Helper;
 
 public class TestBase extends AbstractTestNGCucumberTests {
-	
+
 	public static WebDriver driver ; 
+	// TODO Auto-generated constructor stub
 	public static FirefoxOptions firefoxOption() {
 		FirefoxOptions option = new FirefoxOptions();
 		return option;
@@ -55,24 +56,25 @@ public class TestBase extends AbstractTestNGCucumberTests {
 		else if (browserName.equalsIgnoreCase("safari")) {
 			driver = new SafariDriver(); 
 		}
-		
+
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.get("http://room5.trivago.com/");
 	} 
+	
+	
 	@AfterSuite
 	public void stopDriver() 
 	{
 		//driver.quit();
 	}
-	
+
 	@AfterMethod
 	public void screenshotOnFailure(ITestResult result) 
 	{
 		if (result.getStatus() == ITestResult.FAILURE)
 		{
-			System.out.println("Failed!");
-			System.out.println("Taking Screenshot....");
+			System.out.println("TC Failed!, wait a moment!");
 			Helper.captureScreenshot(driver, result.getName());
 		}
 	}

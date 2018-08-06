@@ -19,9 +19,9 @@ public class ContactPage extends PageBase {
 
 	@FindBy (xpath = "//textarea[@class='contact-msg']")
 	public WebElement contactMsg;
-	public void ContactMsg()
+	public void ContactMsg(String feedback)
 	{
-		setText(contactMsg, "Hello Trivago");
+		setText(contactMsg, feedback);
 	}
 
 	@FindBy (css = "input.contact-input")
